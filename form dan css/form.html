@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Reservasi Kamar Hotel</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <h1>Form Reservasi Kamar Hotel</h1>
+
+    <form action="ordered.html" method="POST">
+        <fieldset>
+            <label for="nama_pemesan">Nama Pemesan:</label>
+            <input type="text" name="nama_pemesan" id="nama_pemesan" required autofocus>
+            <br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <br>
+
+            <label for="nomor_telepon">Nomor Telepon:</label>
+            <input type="tel" name="nomor_telepon" id="nomor_telepon" placeholder="08XXXXXXXXXX" pattern="[0-9]{10,12}" required>
+            <br>
+
+            <label for="checkin">Tanggal Check-in:</label>
+            <input type="date" name="checkin" id="checkin" required>
+            <br>
+
+            <label for="checkout">Tanggal Check-out:</label>
+            <input type="date" name="checkout" id="checkout" required>
+            <br>
+
+            <label for="jenis_kamar">Jenis Kamar:</label>
+            <select name="jenis_kamar" id="jenis_kamar" required>
+                <option value="standard">Standard Room</option>
+                <option value="deluxe">Deluxe Room</option>
+                <option value="suite">Suite Room</option>
+            </select>
+            <br>
+
+            <label for="jumlah_tamu">Jumlah Tamu:</label>
+            <input type="number" name="jumlah_tamu" id="jumlah_tamu" min="1" max="10" required>
+            <br>
+
+            <label for="permintaan_khusus">Permintaan Khusus:</label>
+            <textarea name="permintaan_khusus" id="permintaan_khusus" cols="30" rows="3" placeholder="Misalnya: kamar dengan pemandangan laut"></textarea>
+            <br>
+
+            <label>Sarapan:</label>
+            <input type="radio" name="sarapan" value="ya" required> Ya
+            <input type="radio" name="sarapan" value="tidak" required> Tidak
+            <br>
+
+            <label for="metode_pembayaran">Metode Pembayaran:</label>
+            <select name="metode_pembayaran" id="metode_pembayaran" required>
+                <option value="kartu_kredit">Kartu Kredit</option>
+                <option value="transfer_bank">Transfer Bank</option>
+                <option value="cash">Cash</option>
+            </select>
+            <br>
+
+            <input type="submit" value="Pesan Kamar">
+        </fieldset>
+    </form>
+</body>
+</html>
